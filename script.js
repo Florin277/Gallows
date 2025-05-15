@@ -23,11 +23,11 @@ function searchLetters() {
       --numberLetter;
       chosenWord.splice(i, 1, '0');
     } 
-    if (i == chosenWord.length - 1 && foundLetter == 0) {
-      --livesNo;
-      foundLetter = 0;
-      document.getElementById('lives').innerHTML=livesNo;  
-    }
+  }
+  if (foundLetter == 0) {
+    --livesNo;
+    foundLetter = 0;
+    document.getElementById('lives').innerHTML=livesNo;  
   }
   if (livesNo == 0) {
     document.getElementById('message').innerHTML = "Unfortunately you LOST 😒";
@@ -36,6 +36,7 @@ function searchLetters() {
   }
   document.getElementById('line').innerHTML = arrayPositionsOfChosenWord.join('');
   document.getElementById('searchLetter').value="";
+  document.getElementById('lineNo').innerHTML= numberLetter;
 }
 
 function getRandomInt(totalWords) {
