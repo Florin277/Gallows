@@ -1,8 +1,9 @@
 const words =['House','Welcome','Wellcode'];
 const wordNumber = getRandomInt(words.length);
+let livesNo = 7;
+
 let chosenWord = words[wordNumber];
 let numberLetter = chosenWord.length;
-let livesNo = 7;
 let positionsOfChosenWord = '';
 document.getElementById('lineNo').innerHTML=chosenWord.length;
 document.getElementById('lives').innerHTML=livesNo;
@@ -12,6 +13,7 @@ for (let i = 0; i < chosenWord.length; ++i) {
 document.getElementById('line').innerHTML=positionsOfChosenWord;
 chosenWord = chosenWord.split('');
 let arrayPositionsOfChosenWord = positionsOfChosenWord.split('');
+
 function searchLetters() {
   let foundLetter = 0;
   let letterLooking = document.getElementById('searchLetter').value;
