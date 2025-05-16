@@ -1,10 +1,10 @@
 const words =['House','Welcome','Wellcode'];
 const wordNumber = getRandomInt(words.length);
 let livesNo = 7;
-
 let chosenWord = words[wordNumber];
 let numberLetter = chosenWord.length;
 let positionsOfChosenWord = '';
+
 document.getElementById('lineNo').innerHTML=chosenWord.length;
 document.getElementById('lives').innerHTML=livesNo;
 for (let i = 0; i < chosenWord.length; ++i) {
