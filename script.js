@@ -35,7 +35,7 @@ function searchLetters() {
     foundLetter = 0;
     document.getElementById('lives').innerHTML = livesNo;  
   }
-  printMessage(livesNo, numberLetter);
+  printMessage(livesNo, livesNo);
   document.getElementById('line').innerHTML = positionsOfChosenWord.join('');
   document.getElementById('searchLetter').value = "";
   document.getElementById('lineNo').innerHTML = numberLetter;
@@ -45,7 +45,7 @@ function getRandomInt(totalWords) {
   return Math.floor(Math.random() * totalWords);
 }
 
-function printMessage(x, y) {
+function printMessage(livesNo, livesNo) {
   if (livesNo == 0) {
     document.getElementById('message').innerHTML = "Unfortunately you LOST 😒";
   } else if (numberLetter == 0) {
